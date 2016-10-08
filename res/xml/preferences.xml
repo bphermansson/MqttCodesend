@@ -21,7 +21,7 @@
         android:title="Buttons" >
 
         <EditTextPreference
-            android:key="btn1text"
+            android:key="text1"
             android:summary="Text for button 1"
             android:title="Button 1 text" />
         <EditTextPreference
@@ -30,7 +30,7 @@
             android:title="Button 1 code" />
 
         <EditTextPreference
-            android:key="btn2text"
+            android:key="text2"
             android:summary="Text for button 2"
             android:title="Button 2 text" />
         <EditTextPreference
@@ -39,7 +39,7 @@
             android:title="Button 2 code" />
 
         <EditTextPreference
-            android:key="btn3text"
+            android:key="text3"
             android:summary="Text for button 3"
             android:title="Button 3 text" />
         <EditTextPreference
@@ -48,7 +48,7 @@
             android:title="Button 3 code" />
 
         <EditTextPreference
-            android:key="btn4text"
+            android:key="text4"
             android:summary="Text for button 4"
             android:title="Button 4 text" />
         <EditTextPreference
@@ -57,7 +57,7 @@
             android:title="Button 4 code" />
 
         <EditTextPreference
-            android:key="btn5text"
+            android:key="text5"
             android:summary="Text for button 5"
             android:title="Button 5 text" />
         <EditTextPreference

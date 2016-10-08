@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,9 +27,31 @@ public class MainActivity extends AppCompatActivity {
         String topic = sharedPref.getString("topic", "");
         Log.d("pref:", topic);
 
+        // Get button labels from stored preferences
+        String text1 = sharedPref.getString("text1", "N/A");
+        String text2 = sharedPref.getString("text2", "N/A");
+        String text3 = sharedPref.getString("text3", "N/A");
+        String text4 = sharedPref.getString("text4", "N/A");
+        String text5 = sharedPref.getString("text5", "N/A");
+        // Get gui views
+        TextView edtext1=(TextView) findViewById(R.id.text1);
+        TextView edtext2=(TextView) findViewById(R.id.text2);
+        TextView edtext3=(TextView) findViewById(R.id.text3);
+        TextView edtext4=(TextView) findViewById(R.id.text4);
+        TextView edtext5=(TextView) findViewById(R.id.text5);
+        // Set text
+        edtext1.setText(text1);
+        edtext2.setText(text2);
+        edtext3.setText(text3);
+        edtext4.setText(text4);
+        edtext5.setText(text5);
+
+
         Button btn1=(Button)findViewById(R.id.btn1on);
 
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         Log.d("Menu: ", "Create menu");
@@ -45,12 +69,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     public void btnClick(View view) {
         Log.d("codesend","btnClick");
 
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String mqttip = sharedPref.getString("mqttip", "");
+
         System.out.println(view.getId());
-        String mqttip = getPreferences(MODE_PRIVATE).getString("mqttip", "");
         Log.d("mqttip",mqttip);
 
 
