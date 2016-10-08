@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:summary="Settings"
+    android:title="settings"
+    android:layout_height="200px"
+    android:layout_width="200px"
+    >
+    <EditTextPreference
+        android:key="mqttip"
+        android:summary="IP for the Mqtt broker"
+        android:title="Mqtt broker IP" />
+
+    <EditTextPreference
+        android:key="topic"
+        android:summary="Topic to publish to"
+        android:title="Topic" />
+
+    <PreferenceScreen
+        android:key="pref_config_settings"
+        android:summary="Button codes"
+        android:title="Buttons" >
+
+        <EditTextPreference
+            android:key="btn1text"
+            android:summary="Text for button 1"
+            android:title="Button 1 text" />
+        <EditTextPreference
+            android:key="btn1"
+            android:summary="Code for button 1"
+            android:title="Button 1 code" />
+
+        <EditTextPreference
+            android:key="btn2text"
+            android:summary="Text for button 2"
+            android:title="Button 2 text" />
+        <EditTextPreference
+            android:key="btn2"
+            android:summary="Code for button 2"
+            android:title="Button 2 code" />
+
+        <EditTextPreference
+            android:key="btn3text"
+            android:summary="Text for button 3"
+            android:title="Button 3 text" />
+        <EditTextPreference
+            android:key="btn3"
+            android:summary="Code for button 3"
+            android:title="Button 3 code" />
+
+        <EditTextPreference
+            android:key="btn4text"
+            android:summary="Text for button 4"
+            android:title="Button 4 text" />
+        <EditTextPreference
+            android:key="btn4"
+            android:summary="Code for button 4"
+            android:title="Button 4 code" />
+
+        <EditTextPreference
+            android:key="btn5text"
+            android:summary="Text for button 5"
+            android:title="Button 5 text" />
+        <EditTextPreference
+            android:key="btn5"
+            android:summary="Code for button 5"
+            android:title="Button 5 code" />
+
+    </PreferenceScreen>
+
+</PreferenceScreen>
