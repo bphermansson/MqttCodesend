@@ -1,6 +1,8 @@
 package nu.paheco.patrik.mqttcodesend;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -33,7 +35,7 @@ class SimpleCallback implements MqttCallback {
 
 
 public class MqttPublishSubscribeSample {
-    public static void main(String mqttip, String content){
+    public static void main(Context context, String mqttip, String mqtt_topic, String content){
         String topic = "codesend";
         //String content = "Message from MqttPublishSample";
         int qos = 2;
@@ -59,8 +61,12 @@ public class MqttPublishSubscribeSample {
             MqttMessage message = new MqttMessage(content.getBytes());
             message.setQos(qos);
             sampleClient.setCallback(new SimpleCallback());
-            sampleClient.publish(topic, message);
+            sampleClient.publish(mqtt_topic, message);
             System.out.println("Message published");
+
+            //Toast tea = Toast.makeText(context, "Send", Toast.LENGTH_LONG);
+            //tea.show();
+
             try {
                 Thread.sleep(5000);
                 sampleClient.disconnect();

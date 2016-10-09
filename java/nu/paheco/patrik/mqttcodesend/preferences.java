@@ -14,6 +14,7 @@ public class preferences extends Activity {
         super.onCreate(savedInstanceState);
 
         Log.d("In preferences.java","Show prefs");
+
         // Display the fragment as the main content.
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, new PreferenceExampelFragment())

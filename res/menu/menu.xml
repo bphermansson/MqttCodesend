@@ -7,4 +7,9 @@
         android:title="Settings"
         android:id="@+id/settings">
     </item>
+    <item
+        app:showAsAction="never"
+        android:title="About codes"
+        android:id="@+id/cscodesinfo">
+    </item>
 </menu>

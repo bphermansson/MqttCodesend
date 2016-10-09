@@ -16,7 +16,12 @@
             android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="stateHidden">
         </activity>
-
+        <activity
+            android:name=".cscodes"
+            android:label="About codes"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
         <!-- Mqtt Service -->
         <service android:name="org.eclipse.paho.android.service.MqttService"></service>
 

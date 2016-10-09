@@ -11,9 +11,10 @@
         android:title="Mqtt broker IP" />
 
     <EditTextPreference
-        android:key="topic"
+        android:key="mqtt_topic"
         android:summary="Topic to publish to"
-        android:title="Topic" />
+        android:title="Topic"
+        android:defaultValue="codesend" />
 
     <PreferenceScreen
         android:key="pref_config_settings"
@@ -24,46 +25,77 @@
             android:key="text1"
             android:summary="Text for button 1"
             android:title="Button 1 text" />
+
         <EditTextPreference
-            android:key="btn1"
+            android:key="code1on"
             android:summary="Code for button 1"
-            android:title="Button 1 code" />
+            android:title="Button 1 on code"
+            android:inputType="numberDecimal" />
+        <EditTextPreference
+            android:key="code1off"
+            android:summary="Code for button 1"
+            android:title="Button 1 off code"
+            android:inputType="numberDecimal" />
 
         <EditTextPreference
             android:key="text2"
             android:summary="Text for button 2"
             android:title="Button 2 text" />
         <EditTextPreference
-            android:key="btn2"
+            android:key="code2on"
             android:summary="Code for button 2"
-            android:title="Button 2 code" />
+            android:inputType="numberDecimal"
+            android:title="Button 2 on code" />
+        <EditTextPreference
+            android:key="code2off"
+            android:summary="Code for button 2"
+            android:inputType="numberDecimal"
+            android:title="Button 2 off code" />
 
         <EditTextPreference
             android:key="text3"
             android:summary="Text for button 3"
             android:title="Button 3 text" />
         <EditTextPreference
-            android:key="btn3"
+            android:key="code3on"
             android:summary="Code for button 3"
-            android:title="Button 3 code" />
+            android:inputType="numberDecimal"
+            android:title="Button 3 on code" />
+        <EditTextPreference
+            android:key="code3off"
+            android:summary="Code for button 3"
+            android:inputType="numberDecimal"
+            android:title="Button 3 off code" />
 
         <EditTextPreference
             android:key="text4"
             android:summary="Text for button 4"
             android:title="Button 4 text" />
         <EditTextPreference
-            android:key="btn4"
+            android:key="code4on"
             android:summary="Code for button 4"
-            android:title="Button 4 code" />
+            android:inputType="numberDecimal"
+            android:title="Button 4 on code" />
+        <EditTextPreference
+            android:key="code4off"
+            android:summary="Code for button 4"
+            android:inputType="numberDecimal"
+            android:title="Button 4 off code" />
 
         <EditTextPreference
             android:key="text5"
             android:summary="Text for button 5"
             android:title="Button 5 text" />
         <EditTextPreference
-            android:key="btn5"
+            android:key="code5on"
             android:summary="Code for button 5"
-            android:title="Button 5 code" />
+            android:inputType="numberDecimal"
+            android:title="Button 5 on code" />
+        <EditTextPreference
+            android:key="code5off"
+            android:summary="Code for button 5"
+            android:inputType="numberDecimal"
+            android:title="Button 5 off code" />
 
     </PreferenceScreen>
 
