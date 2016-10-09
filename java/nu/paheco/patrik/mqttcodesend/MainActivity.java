@@ -3,6 +3,7 @@ package nu.paheco.patrik.mqttcodesend;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -32,7 +33,18 @@ public class MainActivity extends AppCompatActivity {
         String mqtt_topic = sharedPref.getString("mqtt_topic", "");
         Log.d("topic:", mqtt_topic);
 
+        // Set button labels from stored settings
+        btnLabels();
 
+        //Button btn1=(Button)findViewById(R.id.btn1on);
+
+
+
+    }
+
+    public void btnLabels() {
+        // Set button labels from stored settings
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         // Get button labels from stored preferences
         String text1 = sharedPref.getString("text1", "N/A");
         String text2 = sharedPref.getString("text2", "N/A");
@@ -52,9 +64,22 @@ public class MainActivity extends AppCompatActivity {
         edtext4.setText(text4);
         edtext5.setText(text5);
 
+        edtext1.setBackgroundColor(0xE1BEE7);
+        edtext2.setBackgroundColor(0xF3E5F5);
+        edtext3.setBackgroundColor(0xE1BEE7);
+        edtext4.setBackgroundColor(0xF3E5F5);
+        edtext5.setBackgroundColor(0xE1BEE7);
 
-        Button btn1=(Button)findViewById(R.id.btn1on);
+    }
 
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        //When BACK BUTTON is pressed, the activity on the stack is restarted
+        //Do what you want on the refresh procedure here
+        Log.d("In onRestart: ", "Oh well");
+        // Update button lables after settings change
+        btnLabels();
     }
 
 

@@ -3,6 +3,7 @@ package nu.paheco.patrik.mqttcodesend;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.widget.TextView;
 
 /**
  * Created by patrik on 10/8/16.
@@ -24,6 +25,7 @@ public class PreferenceExampelFragment extends PreferenceFragment {
         {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.preferences);
+
         }
     }
 
