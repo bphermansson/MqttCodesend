@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,6 +58,18 @@ public class MainActivity extends AppCompatActivity {
         TextView edtext3=(TextView) findViewById(R.id.text3);
         TextView edtext4=(TextView) findViewById(R.id.text4);
         TextView edtext5=(TextView) findViewById(R.id.text5);
+
+        Button btn1on=(Button) findViewById(R.id.btn1on);
+        Button btn2on=(Button) findViewById(R.id.btn2on);
+        Button btn3on=(Button) findViewById(R.id.btn3on);
+        Button btn4on=(Button) findViewById(R.id.btn4on);
+        Button btn5on=(Button) findViewById(R.id.btn5on);
+        Button btn1off=(Button) findViewById(R.id.btn1off);
+        Button btn2off=(Button) findViewById(R.id.btn2off);
+        Button btn3off=(Button) findViewById(R.id.btn3off);
+        Button btn4off=(Button) findViewById(R.id.btn4off);
+        Button btn5off=(Button) findViewById(R.id.btn5off);
+
         // Set text
         edtext1.setText(text1);
         edtext2.setText(text2);
@@ -64,6 +77,27 @@ public class MainActivity extends AppCompatActivity {
         edtext4.setText(text4);
         edtext5.setText(text5);
 
+        if (text1.equals("N/A")) {   // Not set
+            btn1on.setEnabled(false);
+            btn1off.setEnabled(false);
+        }
+        if (text2.equals("N/A")) {   // Not set
+            btn2on.setEnabled(false);
+            btn2off.setEnabled(false);
+        }
+        if (text3.equals("N/A")) {   // Not set
+            btn3on.setEnabled(false);
+            btn3off.setEnabled(false);
+        }
+        if (text4.equals("N/A")) {   // Not set
+            btn4on.setEnabled(false);
+            btn4off.setEnabled(false);
+        }
+        if (text5.equals("N/A")) {   // Not set
+            btn5on.setEnabled(false);
+            btn5off.setEnabled(false);
+        }
+        // Color the buttons
         edtext1.setBackgroundColor(0xE1BEE7);
         edtext2.setBackgroundColor(0xF3E5F5);
         edtext3.setBackgroundColor(0xE1BEE7);
@@ -110,11 +144,11 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String mqttip = sharedPref.getString("mqttip", "");
-        String mqtt_topic = sharedPref.getString("mqtt_topic", "");
+        //String mqtt_topic = sharedPref.getString("mqtt_topic", "");
 
         //System.out.println(view.getId());
         Log.d("mqttip",mqttip);
-        Log.d("mqtt_topic",mqtt_topic);
+        //Log.d("mqtt_topic",mqtt_topic);
 
         String code1on = sharedPref.getString("code1on", "");
         String code2on = sharedPref.getString("code2on", "");
@@ -127,36 +161,44 @@ public class MainActivity extends AppCompatActivity {
         String code4off = sharedPref.getString("code4off", "");
         String code5off = sharedPref.getString("code5off", "");
 
+        String topic1 = sharedPref.getString("topic1", "");
+        String topic2 = sharedPref.getString("topic2", "");
+        String topic3 = sharedPref.getString("topic3", "");
+        String topic4 = sharedPref.getString("topic4", "");
+        String topic5 = sharedPref.getString("topic5", "");
+
+        Log.d("In btnClick: ", topic1);
+
         switch (view.getId()) {
             case R.id.btn1on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code1on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic1, code1on);
                 break;
             case R.id.btn1off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code1off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic1, code1off);
                 break;
             case R.id.btn2on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code2on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic2, code2on);
                 break;
             case R.id.btn2off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code2off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic2, code2off);
                 break;
             case R.id.btn3on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code3on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic3, code3on);
                 break;
             case R.id.btn3off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code3off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic3, code3off);
                 break;
             case R.id.btn4on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code4on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic4, code4on);
                 break;
             case R.id.btn4off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code4off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic4, code4off);
                 break;
             case R.id.btn5on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code5on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic5, code5on);
                 break;
             case R.id.btn5off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, mqtt_topic, code5off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, topic5, code5off);
                 break;
         }
     }

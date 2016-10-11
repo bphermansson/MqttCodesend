@@ -25,7 +25,10 @@
             android:key="text1"
             android:summary="Text for button 1"
             android:title="Button 1 text" />
-
+        <EditTextPreference
+            android:key="topic1"
+            android:summary="Topic for button 1"
+            android:title="Button 1 topic" />
         <EditTextPreference
             android:key="code1on"
             android:summary="Code for button 1"
@@ -42,6 +45,10 @@
             android:summary="Text for button 2"
             android:title="Button 2 text" />
         <EditTextPreference
+            android:key="topic2"
+            android:summary="Topic for button 2"
+            android:title="Button 2 topic" />
+        <EditTextPreference
             android:key="code2on"
             android:summary="Code for button 2"
             android:inputType="numberDecimal"
@@ -56,6 +63,10 @@
             android:key="text3"
             android:summary="Text for button 3"
             android:title="Button 3 text" />
+        <EditTextPreference
+            android:key="topic3"
+            android:summary="Topic for button 3"
+            android:title="Button 3 topic" />
         <EditTextPreference
             android:key="code3on"
             android:summary="Code for button 3"
@@ -72,6 +83,10 @@
             android:summary="Text for button 4"
             android:title="Button 4 text" />
         <EditTextPreference
+            android:key="topic4"
+            android:summary="Topic for button 4"
+            android:title="Button 4 topic" />
+        <EditTextPreference
             android:key="code4on"
             android:summary="Code for button 4"
             android:inputType="numberDecimal"
@@ -86,6 +101,10 @@
             android:key="text5"
             android:summary="Text for button 5"
             android:title="Button 5 text" />
+        <EditTextPreference
+            android:key="topic5"
+            android:summary="Topic for button 5"
+            android:title="Button 5 topic" />
         <EditTextPreference
             android:key="code5on"
             android:summary="Code for button 5"

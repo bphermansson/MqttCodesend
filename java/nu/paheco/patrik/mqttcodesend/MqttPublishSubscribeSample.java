@@ -42,7 +42,8 @@ public class MqttPublishSubscribeSample {
 
         //String broker = "tcp://192.168.1.79:1883";
         String broker = "tcp://" + mqttip + ":1883";
-        Log.d("Broker: ",broker);
+        Log.d("Broker",broker);
+        Log.d("Topic", mqtt_topic);
 
         String clientId = "mqtt_codesend";
         MemoryPersistence persistence = new MemoryPersistence();
