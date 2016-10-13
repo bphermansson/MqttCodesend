@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">MqttCodesend</string>
     <string name="csinfo">
+        These codes are recorded with a Raspberry Pi, a 433 receiver and the 433Utils software.
+        <a href='http://www.princetronics.com/how-to-read-433-mhz-codes-w-raspberry-pi-433-mhz-receiver/'>Click here</a>
+        \n\n
+
         #Nexa
         "ID" "Off code" "On code"\n
 A1 20 21\n

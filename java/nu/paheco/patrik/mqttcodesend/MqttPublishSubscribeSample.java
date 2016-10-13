@@ -36,14 +36,10 @@ class SimpleCallback implements MqttCallback {
 
 public class MqttPublishSubscribeSample {
     public static void main(Context context, String mqttip, String mqtt_topic, String content){
-        String topic = "codesend";
-        //String content = "Message from MqttPublishSample";
         int qos = 2;
-
-        //String broker = "tcp://192.168.1.79:1883";
         String broker = "tcp://" + mqttip + ":1883";
-        Log.d("Broker",broker);
-        Log.d("Topic", mqtt_topic);
+        //Log.d("Broker",broker);
+        //Log.d("Topic", mqtt_topic);
 
         String clientId = "mqtt_codesend";
         MemoryPersistence persistence = new MemoryPersistence();
@@ -54,27 +50,27 @@ public class MqttPublishSubscribeSample {
             connOpts.setCleanSession(true);
             connOpts.setUserName("emonpi");
             connOpts.setPassword("emonpimqtt2016".toCharArray());
-            System.out.println("Connecting to broker: " + broker);
+            //System.out.println("Connecting to broker: " + broker);
             sampleClient.connect(connOpts);
-            sampleClient.subscribe("#", 1);
-            System.out.println("Connected");
-            System.out.println("Publish message: " + content);
+            //sampleClient.subscribe("#", 1);
+            //System.out.println("Connected");
+            //System.out.println("Publish message: " + content);
             MqttMessage message = new MqttMessage(content.getBytes());
             message.setQos(qos);
-            sampleClient.setCallback(new SimpleCallback());
+            //sampleClient.setCallback(new SimpleCallback());
             sampleClient.publish(mqtt_topic, message);
-            System.out.println("Message published");
+            //System.out.println("Message published");
 
             //Toast tea = Toast.makeText(context, "Send", Toast.LENGTH_LONG);
             //tea.show();
 
-            try {
+            /*try {
                 Thread.sleep(5000);
                 sampleClient.disconnect();
             } catch(Exception e) {
                 e.printStackTrace();
-            }
-            System.out.println("Disconnected");
+            }*/
+            //System.out.println("Disconnected");
             //System.exit(0);
         } catch(MqttException me){
             System.out.println("reason " + me.getReasonCode());

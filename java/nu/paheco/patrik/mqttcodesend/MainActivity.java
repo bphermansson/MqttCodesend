@@ -25,14 +25,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("codesend","oncreate");
+        //Log.d("codesend","oncreate");
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String mqttip = sharedPref.getString("mqttip", "");
-        Log.d("pref:", mqttip);
-
+        //Log.d("pref:", mqttip);
         String mqtt_topic = sharedPref.getString("mqtt_topic", "");
-        Log.d("topic:", mqtt_topic);
+        //Log.d("topic:", mqtt_topic);
 
         // Set button labels from stored settings
         btnLabels();
@@ -111,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestart();
         //When BACK BUTTON is pressed, the activity on the stack is restarted
         //Do what you want on the refresh procedure here
-        Log.d("In onRestart: ", "Oh well");
+        //Log.d("In onRestart: ", "Oh well");
         // Update button lables after settings change
         btnLabels();
     }
@@ -119,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        Log.d("Menu: ", "Create menu");
+        //Log.d("Menu: ", "Create menu");
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
@@ -140,14 +139,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnClick(View view) {
-        Log.d("codesend","btnClick");
+        //Log.d("codesend","btnClick");
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String mqttip = sharedPref.getString("mqttip", "");
         //String mqtt_topic = sharedPref.getString("mqtt_topic", "");
 
         //System.out.println(view.getId());
-        Log.d("mqttip",mqttip);
+        //Log.d("mqttip",mqttip);
         //Log.d("mqtt_topic",mqtt_topic);
 
         String code1on = sharedPref.getString("code1on", "");
@@ -201,6 +200,10 @@ public class MainActivity extends AppCompatActivity {
                 MqttPublishSubscribeSample.main(mContext, mqttip, topic5, code5off);
                 break;
         }
+
+        Context context = getApplicationContext();
+        Toast tea = Toast.makeText(context, "Mqtt message sent", Toast.LENGTH_SHORT);
+        tea.show();
     }
 
 
