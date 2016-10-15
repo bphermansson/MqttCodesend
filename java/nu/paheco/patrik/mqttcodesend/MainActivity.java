@@ -126,10 +126,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        Log.d("id", String.valueOf(id));
+        //Log.d("id", String.valueOf(id));
         switch (id) {
             case R.id.settings:
                 startActivity(new Intent(this, preferences.class));
+                break;
+            case R.id.help:
+                startActivity(new Intent(this, help.class));
                 break;
             case R.id.cscodesinfo:
                 startActivity(new Intent(this, cscodes.class));
@@ -166,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         String topic4 = sharedPref.getString("topic4", "");
         String topic5 = sharedPref.getString("topic5", "");
 
-        Log.d("In btnClick: ", topic1);
+        //Log.d("In btnClick: ", topic1);
 
         switch (view.getId()) {
             case R.id.btn1on:

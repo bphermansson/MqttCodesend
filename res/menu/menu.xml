@@ -9,6 +9,11 @@
     </item>
     <item
         app:showAsAction="never"
+        android:title="Help"
+        android:id="@+id/help">
+    </item>
+    <item
+        app:showAsAction="never"
         android:title="About codes"
         android:id="@+id/cscodesinfo">
     </item>

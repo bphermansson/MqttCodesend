@@ -10,12 +10,6 @@
         android:summary="IP for the Mqtt broker"
         android:title="Mqtt broker IP" />
 
-    <EditTextPreference
-        android:key="mqtt_topic"
-        android:summary="Topic to publish to"
-        android:title="Topic"
-        android:defaultValue="codesend" />
-
     <PreferenceScreen
         android:key="pref_config_settings"
         android:summary="Button codes"

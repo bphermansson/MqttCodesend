@@ -2,15 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <TextView
+        android:text="helpheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/help_header"
+        android:padding="5dp" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/cscodesscroll">
+        android:id="@+id/helpscroll">
 
         <TextView
-            android:text="cscodes"
+            android:text="help"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/cscodes_text" />
+            android:id="@+id/help_text"
+            android:padding="5dp" />
     </ScrollView>
 </LinearLayout>

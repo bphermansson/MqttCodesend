@@ -12,7 +12,13 @@
 
         <activity
             android:name=".preferences"
-            android:label="Inställningar"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".help"
+            android:label="Help"
             android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="stateHidden">
         </activity>

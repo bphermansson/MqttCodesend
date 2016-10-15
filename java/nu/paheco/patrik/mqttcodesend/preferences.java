@@ -13,7 +13,7 @@ public class preferences extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.d("In preferences.java","Show prefs");
+        //Log.d("In preferences.java","Show prefs");
 
         // Display the fragment as the main content.
         getFragmentManager().beginTransaction()
