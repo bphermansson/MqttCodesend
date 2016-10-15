@@ -14,7 +14,10 @@
         android:key="pref_config_settings"
         android:summary="Button codes"
         android:title="Buttons" >
-
+        <PreferenceScreen
+            android:key="pref_config_1"
+            android:summary="Button 1"
+            android:title="Button 1" >
         <EditTextPreference
             android:key="text1"
             android:summary="Text for button 1"
@@ -33,7 +36,12 @@
             android:summary="Code for button 1"
             android:title="Button 1 off code"
             android:inputType="numberDecimal" />
+        </PreferenceScreen>
 
+        <PreferenceScreen
+            android:key="pref_config_2"
+            android:summary="Button 2"
+            android:title="Button 2" >
         <EditTextPreference
             android:key="text2"
             android:summary="Text for button 2"
@@ -52,7 +60,12 @@
             android:summary="Code for button 2"
             android:inputType="numberDecimal"
             android:title="Button 2 off code" />
+        </PreferenceScreen>
 
+            <PreferenceScreen
+                android:key="pref_config_3"
+                android:summary="Button 3"
+                android:title="Button 3" >
         <EditTextPreference
             android:key="text3"
             android:summary="Text for button 3"
@@ -71,7 +84,12 @@
             android:summary="Code for button 3"
             android:inputType="numberDecimal"
             android:title="Button 3 off code" />
+            </PreferenceScreen>
 
+                <PreferenceScreen
+                    android:key="pref_config_4"
+                    android:summary="Button 4"
+                    android:title="Button 4" >
         <EditTextPreference
             android:key="text4"
             android:summary="Text for button 4"
@@ -90,7 +108,12 @@
             android:summary="Code for button 4"
             android:inputType="numberDecimal"
             android:title="Button 4 off code" />
+                </PreferenceScreen>
 
+                    <PreferenceScreen
+                        android:key="pref_config_5"
+                        android:summary="Button 5"
+                        android:title="Button 5" >
         <EditTextPreference
             android:key="text5"
             android:summary="Text for button 5"
@@ -109,6 +132,7 @@
             android:summary="Code for button 5"
             android:inputType="numberDecimal"
             android:title="Button 5 off code" />
+                    </PreferenceScreen>
 
     </PreferenceScreen>
 
