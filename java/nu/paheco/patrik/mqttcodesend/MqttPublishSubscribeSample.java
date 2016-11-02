@@ -35,7 +35,7 @@ class SimpleCallback implements MqttCallback {
 
 
 public class MqttPublishSubscribeSample {
-    public static void main(Context context, String mqttip, String mqtt_topic, String content){
+    public static void main(Context context, String mqttip, String mqttuser, String mqttpass, String mqtt_topic, String content){
         int qos = 2;
         String broker = "tcp://" + mqttip + ":1883";
         //Log.d("Broker",broker);
@@ -48,8 +48,8 @@ public class MqttPublishSubscribeSample {
             MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
             MqttConnectOptions connOpts = new MqttConnectOptions();
             connOpts.setCleanSession(true);
-            connOpts.setUserName("emonpi");
-            connOpts.setPassword("emonpimqtt2016".toCharArray());
+            connOpts.setUserName(mqttuser);
+            connOpts.setPassword(mqttpass.toCharArray());
             //System.out.println("Connecting to broker: " + broker);
             sampleClient.connect(connOpts);
             //sampleClient.subscribe("#", 1);

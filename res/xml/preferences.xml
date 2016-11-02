@@ -9,6 +9,14 @@
         android:key="mqttip"
         android:summary="IP for the Mqtt broker"
         android:title="Mqtt broker IP" />
+    <EditTextPreference
+        android:key="mqttuser"
+        android:summary="Username for the Mqtt broker"
+        android:title="Mqtt broker username" />
+    <EditTextPreference
+        android:key="mqttpass"
+        android:summary="Password for the Mqtt broker"
+        android:title="Mqtt broker password" />
 
     <PreferenceScreen
         android:key="pref_config_settings"

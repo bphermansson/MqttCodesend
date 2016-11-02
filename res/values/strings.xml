@@ -2,10 +2,18 @@
     <string name="app_name">MqttCodesend</string>
     <string name="help_header">Help for Mqttcodesend
     </string>
-    <string name="help">"Start by opening Settings in the menu.\nChoose 'Mqtt broker IP' and fill in the IP-address of your Mqtt broker.\nNext, click Buttons. Here you can set the label, topic and codes for each button. When a button is clicked, a Mqtt message are sent to the specified Mqtt broker.The message has the button's topic and the code is the payload.\nIf you dont set a label for a button it won't be activated."
+    <string name="help">"Start by opening Settings in the menu.\nChoose 'Mqtt broker IP' and fill in the IP-address of your Mqtt broker.
+        \n
+        Also fill in the username and password if your broker wants that.
+        \n
+
+        Next, click Buttons. Here you can set the label, topic and codes for each button. When a button is clicked, a Mqtt message
+        are sent to the Mqtt broker specified above.The message has the button's topic and the code is the payload.\nIf you dont set a label
+        for a button it won't be activated."\n
     </string>
 
-    <string name="csinfo">These codes are recorded with a Raspberry Pi, a 433 receiver and the 433Utils software.
+    <string name="csinfo">These codes are recorded with a Raspberry Pi, a 433 receiver and the 433Utils software.\n
+        You can longpress, select copy and use them in the button settings.
         \n\n
 
         #Nexa

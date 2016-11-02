@@ -20,25 +20,24 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Context mContext;
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Log.d("codesend","oncreate");
+        Log.d(TAG, "onCreate()");
 
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        String mqttip = sharedPref.getString("mqttip", "");
+        //SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        //String mqttip = sharedPref.getString("mqttip", "");
         //Log.d("pref:", mqttip);
-        String mqtt_topic = sharedPref.getString("mqtt_topic", "");
+        //String mqtt_topic = sharedPref.getString("mqtt_topic", "");
         //Log.d("topic:", mqtt_topic);
 
         // Set button labels from stored settings
         btnLabels();
 
         //Button btn1=(Button)findViewById(R.id.btn1on);
-
-
 
     }
 
@@ -146,6 +145,9 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String mqttip = sharedPref.getString("mqttip", "");
+        String mqttuser = sharedPref.getString("mqttuser", "");
+        String mqttpass = sharedPref.getString("mqttpass", "");
+
         //String mqtt_topic = sharedPref.getString("mqtt_topic", "");
 
         //System.out.println(view.getId());
@@ -173,34 +175,34 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.btn1on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic1, code1on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic1, code1on);
                 break;
             case R.id.btn1off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic1, code1off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic1, code1off);
                 break;
             case R.id.btn2on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic2, code2on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic2, code2on);
                 break;
             case R.id.btn2off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic2, code2off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic2, code2off);
                 break;
             case R.id.btn3on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic3, code3on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic3, code3on);
                 break;
             case R.id.btn3off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic3, code3off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic3, code3off);
                 break;
             case R.id.btn4on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic4, code4on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic4, code4on);
                 break;
             case R.id.btn4off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic4, code4off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic4, code4off);
                 break;
             case R.id.btn5on:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic5, code5on);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic5, code5on);
                 break;
             case R.id.btn5off:
-                MqttPublishSubscribeSample.main(mContext, mqttip, topic5, code5off);
+                MqttPublishSubscribeSample.main(mContext, mqttip, mqttuser, mqttpass, topic5, code5off);
                 break;
         }
 
