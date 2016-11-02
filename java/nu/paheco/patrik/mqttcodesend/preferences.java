@@ -9,6 +9,8 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 /**
  * Created by patrik on 9/27/16.
  */
@@ -26,9 +28,12 @@ public class preferences extends PreferenceActivity {
                 .commit();
 
     }
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
-                                          String key) {
-        Toast.makeText(getApplicationContext(),
-                "Your Message", Toast.LENGTH_LONG).show();
-    }
+
+    private SharedPreferences.OnSharedPreferenceChangeListener listener =
+            new SharedPreferences.OnSharedPreferenceChangeListener() {
+                public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+                    Log.d("TAG","Setting change");
+
+                }
+            };
 }
