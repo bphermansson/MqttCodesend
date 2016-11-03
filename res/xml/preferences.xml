@@ -38,12 +38,12 @@
             android:key="code1on"
             android:summary="Code for button 1"
             android:title="Button 1 on code"
-            android:inputType="numberDecimal" />
+            android:inputType="text" />
         <EditTextPreference
             android:key="code1off"
             android:summary="Code for button 1"
             android:title="Button 1 off code"
-            android:inputType="numberDecimal" />
+            android:inputType="text" />
         </PreferenceScreen>
 
         <PreferenceScreen
@@ -61,12 +61,12 @@
         <EditTextPreference
             android:key="code2on"
             android:summary="Code for button 2"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:title="Button 2 on code" />
         <EditTextPreference
             android:key="code2off"
             android:summary="Code for button 2"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:title="Button 2 off code" />
         </PreferenceScreen>
 
@@ -85,12 +85,12 @@
         <EditTextPreference
             android:key="code3on"
             android:summary="Code for button 3"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:title="Button 3 on code" />
         <EditTextPreference
             android:key="code3off"
             android:summary="Code for button 3"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:title="Button 3 off code" />
             </PreferenceScreen>
 
@@ -109,12 +109,12 @@
         <EditTextPreference
             android:key="code4on"
             android:summary="Code for button 4"
-            android:inputType="numberDecimal"
-            android:title="Button 4 on code" />
+            android:title="Button 4 on code"
+            android:inputType="text" />
         <EditTextPreference
             android:key="code4off"
             android:summary="Code for button 4"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:title="Button 4 off code" />
                 </PreferenceScreen>
 
@@ -133,12 +133,12 @@
         <EditTextPreference
             android:key="code5on"
             android:summary="Code for button 5"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:title="Button 5 on code" />
         <EditTextPreference
             android:key="code5off"
             android:summary="Code for button 5"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:title="Button 5 off code" />
                     </PreferenceScreen>
 
